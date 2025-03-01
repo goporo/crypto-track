@@ -15,6 +15,7 @@ const Homepage = () => {
     const globalStats = data?.data?.stats;
 
     if (isFetching) return <Loader />;
+    if (!globalStats) return <div>No data available</div>;
 
     return (
         <>
